@@ -1,0 +1,30 @@
+server:
+  port: 8383
+  servlet:
+    context-path: /parkinglot
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, liquibase
+
+spring:
+  datasource:
+    username: pls-local
+    password: password@123
+    url: jdbc:mysql://localhost:3306/parkinglotsystem
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+#    show-sql: true
+    properties:
+      hibernate:
+        ddl-auto: update
+#        format_sql: true
+#        use_sql_comments: true
+
+
+
+logging:
+  level:
+    com.parking.lot: DEBUG
