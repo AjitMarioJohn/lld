@@ -1,7 +1,9 @@
 package com.parking.lot.presentation.rest.api.floor;
 
 import com.parking.lot.core.usecases.floors.CreateFloorUseCase;
+import com.parking.lot.core.usecases.floors.FetchFloorByNameUseCase;
 import com.parking.lot.presentation.rest.api.entities.ApiResponse;
+import com.parking.lot.presentation.rest.api.entities.FloorResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,5 +22,6 @@ public final class FloorOutputMapper {
 
         return ResponseEntity.created(location).body(new ApiResponse<>(HttpStatus.CREATED, "floor created successfully"));
     }
+
 
 }

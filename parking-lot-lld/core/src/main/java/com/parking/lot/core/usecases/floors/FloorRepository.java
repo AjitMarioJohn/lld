@@ -14,9 +14,9 @@ public interface FloorRepository {
 
     Optional<Floor> findByFloorName(String floorName);
 
-    Optional<Floor> findByFloorNumber(String floorNumber);
+    Optional<Floor> findByFloorNumber(Long floorNumber);
 
-    Optional<List<Floor>> fetchAllFloors();
+    List<Floor> fetchAllFloors();
 
 
 }
